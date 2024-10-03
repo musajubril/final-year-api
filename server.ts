@@ -5,7 +5,7 @@ import OpenAI from "openai";
 
 require('dotenv').config()
 const app = express();
-const port = 8080;
+const port = process.env.PORT || 8080;
 const genAI = new GoogleGenerativeAI("AIzaSyB6YAX7BQ5-RTwPH0KOIq3VrdtRA_f_Ekg");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     app.use(bodyParser());
